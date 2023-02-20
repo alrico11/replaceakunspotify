@@ -1,0 +1,135 @@
+{
+  
+  "dependencies": {
+  
+    
+  "axios": "^0.10.0",
+  
+    
+  "axios-cookiejar-support": "^4.0.6",
+  
+    
+  "chalk": "^4.1.0",
+  
+    
+  "cheerio": "^1.0.0-rc.5",
+  
+    
+  "clipboardy": "^3.0.0",
+  
+    
+  "code-protect": "^1.0.3",
+  
+    
+  "console": "^0.7.2",
+  
+    
+  "constants": "^0.0.2",
+  
+    
+  "cookie-parser": "^1.4.6",
+  
+    
+  "cryptolens": "^1.0.2",
+  
+    
+  "delay": "^5.0.0",
+  
+    
+  "express": "^4.18.2",
+  
+    
+  "figlet": "^1.5.0",
+  
+    
+  "form-data": "^2.5.1",
+  
+    
+  "formdata-node": "^5.0.0",
+  
+    
+  "fs": "^0.0.1-security",
+  
+    
+  "http": "^0.0.1-security",
+  
+    
+  "i": "^0.3.7",
+  
+    
+  "innertext": "^1.0.3",
+  
+    
+  "install": "^0.13.0",
+  
+    
+  "it": "^1.1.1",
+  
+    
+  "lodash": "^4.17.21",
+  
+    
+  "moment": "^2.29.1",
+  
+    
+  "node-fetch": "^2.6.1",
+  
+    
+  "node-libcurl": "^3.0.0",
+  
+    
+  "node-random-name": "^1.0.1",
+  
+    
+  "os": "^0.1.1",
+  
+    
+  "package.json": "^2.0.1",
+  
+    
+  "puppeteer": "^7.1.0",
+  
+    
+  "puppeteer-extra": "^3.1.16",
+  
+    
+  "puppeteer-extra-plugin-stealth": "^2.7.5",
+  
+    
+  "qrcode-terminal": "^0.12.0",
+  
+    
+  "random-useragent": "^0.5.0",
+  
+    
+  "readline-sync": "^1.4.10",
+  
+    
+  "request": "^2.88.2",
+  
+    
+  "request-promise": "^4.2.6",
+  
+    
+  "request-promises": "^1.1.0",
+  
+    
+  "requestify": "^0.2.5",
+  
+    
+  "set-cookie-parser": "^2.5.1",
+  
+    
+  "string": "^3.3.3",
+  
+    
+  "superagent": "^8.0.9",
+  
+    
+  "tough-cookie": "^4.1.2",
+  
+    
+  "whatsapp-web.js": "^1.12.4"
+  
+  }
+}
