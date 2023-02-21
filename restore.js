@@ -65,7 +65,7 @@ var chalk = require('chalk');
         })
         const page = await browser.newPage();
         console.log('\n')
-        console.log('[' + no + ']' + " Proses Pergantian Email " + oldemail)
+        console.log('[' + no + ']' + " Proses Replace Akun " + oldemail)
         await page.goto("https://www.spotify.com/us/account/profile/", $options);
         await delay(5000)
         await page.waitForSelector("input[type=text");
