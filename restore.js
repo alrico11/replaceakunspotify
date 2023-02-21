@@ -26,12 +26,11 @@ var chalk = require('chalk');
             figlet.textSync('SPOTIFY     ', { horizontalLayout: 'fitted' })
         )
     );
-    console.log("Source By. Alrico R")
     console.log('\n')
-    var oldemail = readlineSync.question(chalk.whiteBright('[+] Input email lama      : '));
-    var oldpass = readlineSync.question(chalk.whiteBright('[+] Input pass lama       : '));
-    var newemail = readlineSync.question(chalk.whiteBright('[+] Input email baru      : '));
-    var newpass = readlineSync.question(chalk.whiteBright('[+] Input email baru      : '));
+    var oldemail = readlineSync.question(chalk.whiteBright('[+] Input email lama           : '));
+    var oldpass =  readlineSync.question(chalk.whiteBright('[+] Input akun pass lama       : '));
+    var newemail = readlineSync.question(chalk.whiteBright('[+] Input email akun baru      : '));
+    var newpass =  readlineSync.question(chalk.whiteBright('[+] Input akun pass baru       : '));
     var i = 0
     var o = 0
     while (i < 1) {
@@ -157,8 +156,8 @@ var chalk = require('chalk');
         const notyou = await newPagenew.$('#root > div > div.sc-ieecCq.lniCUe > div > div > div.sc-pVTFL.hqGqOL > div > a')
         await notyou.click()
         await notyou.dispose()
-        await newPagenew.waitForSelector("input[type=text");
 
+        await newPagenew.waitForSelector("input[type=text");
         const emailFieldnew = await newPagenew.$('input[type=text]')
         await emailFieldnew.type('')
         await newPagenew.keyboard.down('Control');
@@ -299,7 +298,7 @@ var chalk = require('chalk');
         //CHANGE PASSWORD
         await page.goto("https://www.spotify.com/us/account/change-password/", $options);
         await delay(3000)
-        console.log('[-]' + " Proses Pergantian Password " + oldemail)
+        console.log('[-]' + " Proses Pergantian Password ")
         await page.waitForSelector("#old_password");
         const chngepass = await page.$('#old_password')
         await chngepass.type(newpass)
@@ -315,12 +314,33 @@ var chalk = require('chalk');
         await page.keyboard.press('Enter')
         await delay(5000)
         console.log(chalk.greenBright("=============================================="))
-        console.log(chalk.greenBright("Silahkan logout akun di APLIKASI SPOTIFY KAMU"))
+        console.log(chalk.greenBright("Silahkan Buka APLIKASI SPOTIFY KAMU"))
         console.log(chalk.greenBright("Kemudian login pakai akun lama :"))
         console.log(chalk.greenBright("Email: " + oldemail))
         console.log(chalk.greenBright("Pass: " + oldpass))
         console.log(chalk.greenBright("=============================================="))
         // console.log("JANGAN MERUBAH PASSWORD YA")
+        await page.goto("https://accounts.spotify.com/revoke_sessions/", $options);
+        await delay(3000)
+        await page.goto("https://accounts.spotify.com/id/login", $options);
+        await page.waitForSelector("input[type=text");
+        const inputemailold = await page.$('input[type=text]')
+        await inputemailold.type('')
+        await page.keyboard.down('Control');
+        await page.keyboard.press('A');
+        await page.keyboard.up('Control');
+        await page.keyboard.press('Backspace');
+        await inputemailold.type(nama2 + hasil1 + nama1 + '@mohondihapusemailnyagantiyangbaru.id')
+        await page.waitForSelector("input[type=password]");
+        const passwordField1 = await page.$('input[type=password]')
+        await passwordField1.type(oldpass)
+        await passwordField1.dispose()
+        await page.waitForSelector("button[id=login-button]");
+        const buttonField1 = await page.$('button[id=login-button]')
+        await buttonField1.click()
+        await buttonField1.dispose()
+        await delay(5000)
+        await page.goto("https://accounts.spotify.com/revoke_sessions/", $options);
         browser.close()
     }
 })();
