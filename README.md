@@ -1,6 +1,9 @@
 # Auto Replace Account Spotify + Restore Playlist
-![image](https://user-images.githubusercontent.com/91462302/220404972-401304cc-b6c7-459d-8efd-2fef83d9c750.png)
-![image](https://user-images.githubusercontent.com/91462302/220393866-60c4d39c-6620-4409-98c0-788d9d717810.png)
+![image](https://user-images.githubusercontent.com/91462302/220407289-ee632c6a-b14e-46be-8733-68a7abc0b425.png)
+
+![image](https://user-images.githubusercontent.com/91462302/220407454-2a5c484b-02a4-4263-8f58-1ea1ced56f9c.png)
+
+![image](https://user-images.githubusercontent.com/91462302/220407613-3f47a87b-c8be-4117-9426-8a01374e053d.png)
 
 1. npm install i
 2. npm install puppeteer
