@@ -1,4 +1,5 @@
 # Auto Replace Account Spotify + Restore Playlist
+![image](https://user-images.githubusercontent.com/91462302/220393866-60c4d39c-6620-4409-98c0-788d9d717810.png)
 
 1. npm install i
 2. node restore.js
