@@ -26,6 +26,7 @@ var chalk = require('chalk');
             figlet.textSync('SPOTIFY     ', { horizontalLayout: 'fitted' })
         )
     );
+    console.log("Source By. Alrico R")
     console.log('\n')
     var oldemail = readlineSync.question(chalk.whiteBright('[+] Input email lama      : '));
     var oldpass = readlineSync.question(chalk.whiteBright('[+] Input pass lama       : '));
