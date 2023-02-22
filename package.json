@@ -3,34 +3,10 @@
   "dependencies": {
   
     
-  "axios": "^0.10.0",
-  
-    
-  "axios-cookiejar-support": "^4.0.6",
-  
-    
-  "chalk": "^4.1.0",
-  
-    
-  "cheerio": "^1.0.0-rc.5",
-  
-    
-  "clipboardy": "^3.0.0",
-  
-    
-  "code-protect": "^1.0.3",
-  
-    
   "console": "^0.7.2",
   
     
   "constants": "^0.0.2",
-  
-    
-  "cookie-parser": "^1.4.6",
-  
-    
-  "cryptolens": "^1.0.2",
   
     
   "delay": "^5.0.0",
@@ -42,16 +18,7 @@
   "figlet": "^1.5.0",
   
     
-  "form-data": "^2.5.1",
-  
-    
-  "formdata-node": "^5.0.0",
-  
-    
   "fs": "^0.0.1-security",
-  
-    
-  "http": "^0.0.1-security",
   
     
   "i": "^0.3.7",
@@ -70,12 +37,6 @@
   
     
   "moment": "^2.29.1",
-  
-    
-  "node-fetch": "^2.6.1",
-  
-    
-  "node-libcurl": "^3.0.0",
   
     
   "node-random-name": "^1.0.1",
@@ -105,31 +66,7 @@
   "readline-sync": "^1.4.10",
   
     
-  "request": "^2.88.2",
-  
-    
-  "request-promise": "^4.2.6",
-  
-    
-  "request-promises": "^1.1.0",
-  
-    
-  "requestify": "^0.2.5",
-  
-    
-  "set-cookie-parser": "^2.5.1",
-  
-    
-  "string": "^3.3.3",
-  
-    
-  "superagent": "^8.0.9",
-  
-    
-  "tough-cookie": "^4.1.2",
-  
-    
-  "whatsapp-web.js": "^1.12.4"
+  "string": "^3.3.3"
   
   }
 }
