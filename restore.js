@@ -26,11 +26,12 @@ var chalk = require('chalk');
             figlet.textSync('SPOTIFY     ', { horizontalLayout: 'fitted' })
         )
     );
+    console.log("Source By. Alrico R")
     console.log('\n')
     var oldemail = readlineSync.question(chalk.whiteBright('[+] Input email lama           : '));
-    var oldpass =  readlineSync.question(chalk.whiteBright('[+] Input akun pass lama       : '));
+    var oldpass = readlineSync.question(chalk.whiteBright('[+] Input akun pass lama       : '));
     var newemail = readlineSync.question(chalk.whiteBright('[+] Input email akun baru      : '));
-    var newpass =  readlineSync.question(chalk.whiteBright('[+] Input akun pass baru       : '));
+    var newpass = readlineSync.question(chalk.whiteBright('[+] Input akun pass baru       : '));
     var i = 0
     var o = 0
     while (i < 1) {
@@ -72,6 +73,7 @@ var chalk = require('chalk');
         const emailField = await page.$('input[type=text]')
         await emailField.type(oldemail)
         await emailField.dispose()
+        await delay(3000)
         await page.waitForSelector("input[type=password]");
         const passwordField = await page.$('input[type=password]')
         await passwordField.type(oldpass)
@@ -91,7 +93,7 @@ var chalk = require('chalk');
         await page.keyboard.up('Control');
 
         await page.keyboard.press('Backspace');
-        await delay(3000)
+        await delay(5000)
         await street1.type(nama2 + hasil1 + nama1 + '@mohondihapusemailnyagantiyangbaru.id')
         await street1.dispose()
 
@@ -108,13 +110,13 @@ var chalk = require('chalk');
             await delay(3000)
         } catch (err) {
             await page.keyboard.press('Enter')
-            await delay(3000)
+            await delay(5000)
             console.log(chalk.redBright("=============================================="))
             console.log(chalk.redBright('[' + '=' + ']' + ' CHANGE EMAIL BERHASIL'))
             console.log(chalk.redBright('[' + '?' + ']' + ' EMAIL : ' + nama2 + hasil1 + nama1 + '@mohondihapusemailnyagantiyangbaru.id'))
             console.log(chalk.redBright('[' + '?' + ']' + ' PASS  : ' + oldpass))
             console.log(chalk.redBright("=============================================="))
-            await delay(3000)
+            await delay(5000)
         }
         await page.keyboard.press('Enter')
 
@@ -126,7 +128,7 @@ var chalk = require('chalk');
         await page.waitForSelector('#app > div.uk-container.uk-container-center > div.uk-margin-top > div > div:nth-child(1) > div > span:nth-child(2) > a')
         const signold = await page.$('#app > div.uk-container.uk-container-center > div.uk-margin-top > div > div:nth-child(1) > div > span:nth-child(2) > a')
         await signold.click()
-        await delay(2000)
+        await delay(5000)
         const pageTarget = page.target()
         const newTarget = await browser.waitForTarget(
             (target) => target.opener() === pageTarget
@@ -140,7 +142,7 @@ var chalk = require('chalk');
         console.log('[' + '+' + '] Berhasil Login Akun Lama ')
 
         // //NEW SPOTIFY
-        await delay(3000)
+        await delay(5000)
         console.log('[-]' + ' Proses login akun baru... ' + newemail)
         await page.waitForSelector('#app > div.uk-container.uk-container-center > div.uk-margin-top > div > div:nth-child(2) > div > span:nth-child(3) > a')
         const signnew = await page.$('#app > div.uk-container.uk-container-center > div.uk-margin-top > div > div:nth-child(2) > div > span:nth-child(3) > a')
