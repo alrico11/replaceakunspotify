@@ -44,9 +44,23 @@ var chalk = require('chalk');
         var nama2 = random_name({
             last: true
         });
-        var hasil1 = Math.floor(Math.random() * 100) + 21;
+        var angka1 = Math.floor(Math.random() * 100) + 100
+        var angka2 = Math.floor(Math.random() * 100) + 25
+        const userAgentList = [
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/' + angka1 + '.36 (KHTML, like Gecko) Chrome/' + angka2 + '.0.4577.' + angka2 + ' Safari/' + angka1 + '.36',
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_2 like Mac OS X) AppleWebKit/' + angka1 + '.1.' + angka2 + ' (KHTML, like Gecko) Version/14.0.3 Mobile/15E' + angka1 + ' Safari/' + angka1 + '.1',
 
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/' + angka1 + '.' + angka2 + ' (KHTML, like Gecko) Chrome/' + angka2 + '.0.4280.' + angka1 + ' Safari/' + angka1 + '.' + angka2 + ' Edg/' + angka2 + '.0.' + angka1 + '.75',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/' + angka1 + '.' + angka2 + ' (KHTML, like Gecko) Chrome/' + angka2 + '.0.3538.' + angka1 + ' Safari/' + angka1 + '.' + angka2 + ' Edge/' + angka2 + '.18363',
+        ]
+        var hasil1 = Math.floor(Math.random() * 100) + 21;
+        const randomUserAgent = userAgentList[Math.floor(Math.random() * userAgentList.length)];
         const $options = {
+            headers: {
+                "user-agent": randomUserAgent,
+                        "Content-Type": "application/x-www-form-urlencoded",
+                        Connection: "Keep-Alive",
+                    },
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
@@ -68,7 +82,6 @@ var chalk = require('chalk');
         console.log('\n')
         console.log('[' + no + ']' + " Proses Replace Akun " + oldemail)
         await page.goto("https://www.spotify.com/us/account/profile/", $options);
-        await delay(5000)
         await page.waitForSelector("input[type=text");
         const emailField = await page.$('input[type=text]')
         await emailField.type(oldemail)
