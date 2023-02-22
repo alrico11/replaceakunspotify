@@ -58,7 +58,7 @@ var chalk = require('chalk');
         const $options = {
             headers: {
                 "user-agent": randomUserAgent,
-                    },
+            },
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
@@ -73,7 +73,7 @@ var chalk = require('chalk');
         };
         const browser = await puppeteer.launch({
             executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',
-            headless: false,
+            headless: true,
             devtools: false,
         })
         const page = await browser.newPage();
@@ -84,7 +84,16 @@ var chalk = require('chalk');
         const emailField = await page.$('input[type=text]')
         await emailField.type(oldemail)
         await emailField.dispose()
-        await delay(3000)
+        await page.waitForSelector("input[type=password]");
+        const passwordFieldn = await page.$('input[type=password]')
+        await passwordFieldn.type("passwordku")
+        await passwordFieldn.dispose()
+        await page.waitForSelector("button[id=login-button]");
+        const buttonFieldn = await page.$('button[id=login-button]')
+        await buttonFieldn.click()
+        await buttonFieldn.dispose()
+        await page.goto("https://www.spotify.com/us/account/profile/", $options);
+
         await page.waitForSelector("input[type=password]");
         const passwordField = await page.$('input[type=password]')
         await passwordField.type(oldpass)
@@ -180,6 +189,18 @@ var chalk = require('chalk');
         await delay(3000)
         await emailFieldnew.type(newemail) //OLD EMAIL
         await emailFieldnew.dispose()
+
+        await newPagenew.waitForSelector("input[type=password]");
+        const passwordFieldnew1 = await newPagenew.$('input[type=password]')
+        await passwordFieldnew1.type("passwordku")
+        await passwordFieldnew1.dispose()
+        await newPagenew.waitForSelector("button[id=login-button]");
+        const passwordFieldnew2 = await newPagenew.$('button[id=login-button]')
+        await passwordFieldnew2.click()
+        await passwordFieldnew2.dispose()
+        await newPagenew.goto("https://www.spotify.com/us/account/profile/", $options);
+
+
         await newPagenew.waitForSelector("input[type=password]");
         const passwordFieldnew = await newPagenew.$('input[type=password]')
         await passwordFieldnew.type(newpass)
