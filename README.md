@@ -10,3 +10,4 @@
 3. node restore.js
 4. INPUT AKUN LAMA YANG SUDAH TIDAK BISA PREMIUM
 5. INPUT AKUN BARU YANG SUDAH PREMIUM
+6. Kalau ada error, set headless jadi false
