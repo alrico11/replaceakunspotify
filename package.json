@@ -3,6 +3,9 @@
   "dependencies": {
   
     
+  "chalk": "^4.1.0",
+  
+    
   "console": "^0.7.2",
   
     
