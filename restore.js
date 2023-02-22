@@ -198,7 +198,7 @@ var chalk = require('chalk');
         const passwordFieldnew2 = await newPagenew.$('button[id=login-button]')
         await passwordFieldnew2.click()
         await passwordFieldnew2.dispose()
-        await newPagenew.goto("https://www.spotify.com/us/account/profile/", $options);
+        await newPagenew.reload()
 
 
         await newPagenew.waitForSelector("input[type=password]");
